@@ -1,0 +1,77 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="2dp"
+    card_view:cardBackgroundColor="#fff"
+    card_view:cardCornerRadius="5dp"
+    card_view:cardElevation="4dp"
+    card_view:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/buyerNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buyer Name: "
+            android:padding="5dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            />
+
+        <TextView
+            android:id="@+id/buyerName"
+            style="@style/Base.TextAppearance.AppCompat.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/buyerNameText"
+            android:padding="5dp"
+            android:text="Subah"
+            android:textColor="@color/purple_700"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/buyerPhoneText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buyerNameText"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:padding="5dp"
+            android:text="Buyer Phone No.: " />
+
+        <TextView
+            android:id="@+id/buyerPhone"
+            style="@style/Base.TextAppearance.AppCompat.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buyerNameText"
+            android:layout_toEndOf="@+id/buyerPhoneText"
+            android:padding="5dp"
+            android:text="017111111111"
+            android:textColor="@color/purple_700"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_child"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buyerPhoneText"
+            android:layout_centerHorizontal="true"
+            android:padding="20dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="74dp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
